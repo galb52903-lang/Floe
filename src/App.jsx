@@ -4,10 +4,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './App.css';
 
 import ProductGrid from './components/ProductGrid';
+import CartDrawer from './components/CartDrawer';
+import { useCart } from './hooks/useCart';
+
+import WholesalePage from './components/WholesalePage';
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [cartCount, setCartCount] = useState(0);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const { cartItems, addToCart, updateQuantity, calculateTotals } = useCart();
+  const { totalCount } = calculateTotals();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,11 +22,6 @@ function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const handleAddToCart = (product) => {
-    setCartCount(prev => prev + 1);
-    console.log(`Added to cart: ${product.name}`);
-  };
 
   return (
     <div className="floe-app">
@@ -36,14 +37,21 @@ function App() {
         <div className="cart-wrapper">
           <motion.div 
             className="cart-icon"
+            onClick={() => setIsCartOpen(true)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
             <ShoppingCart size={24} />
-            <span className="cart-count">{cartCount}</span>
+            <span className="cart-count">{totalCount}</span>
           </motion.div>
         </div>
       </nav>
+
+      <CartDrawer 
+        isOpen={isCartOpen} 
+        onClose={() => setIsCartOpen(false)} 
+        cartData={{ cartItems, updateQuantity, calculateTotals }}
+      />
 
       {/* Hero Section */}
       <header className="hero" id="home">
@@ -91,7 +99,18 @@ function App() {
       </header>
 
       {/* Product Catalog */}
-      <ProductGrid onAddToCart={handleAddToCart} />
+      <ProductGrid onAddToCart={addToCart} />
+
+      {/* Wholesale Partnership Section */}
+      <WholesalePage />
+
+      {/* Footer / Contact */}
+      <footer className="footer" id="contact">
+        <div className="footer-content">
+          <div className="footer-logo">FLOE</div>
+          <p>© 2026 Floe Syrup Co. Inspired by the Arctic. Crafted for Coffee.</p>
+        </div>
+      </footer>
     </div>
   );
 }
