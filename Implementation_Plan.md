@@ -7,11 +7,11 @@
 - [x] **Design Navigation Framework:** Build sticky frosted-glass navbar with navigation links.
 - [x] **Build Hero Section:** Develop full-height landing section with high-res "frozen" imagery and primary CTA.
 
-### 🌬️ Phase 2: The Glacial Catalog & UI Layout (CURRENT)
-- [ ] **Develop Product Card Component:** Build reusable card with image container, flavor title, price ($15), and a "Quick Add" button.
-- [ ] **Configure Responsive Grid:** Nest products in a CSS Grid that adjusts column counts based on viewport size.
-- [ ] **Integrate Hover Animations:** Add a layer of "frost" that subtly grows over the product image when the user hovers.
-- [ ] **Add Flavor Tags:** Label syrups with categories (e.g., "Sweet", "Earthy", "Limited Edition").
+### 🌬️ Phase 2: The Glacial Catalog & UI Layout (COMPLETED)
+- [x] **Develop Product Card Component:** Build reusable card with image container, flavor title, price ($15), and a "Quick Add" button.
+- [x] **Configure Responsive Grid:** Nest products in a CSS Grid that adjusts column counts based on viewport size.
+- [x] **Integrate Hover Animations:** Add a layer of "frost" that subtly grows over the product image when the user hovers.
+- [x] **Add Flavor Tags:** Label syrups with categories (e.g., "Sweet", "Earthy", "Limited Edition").
 
 ### 🛒 Phase 3: "Frozen" Cart Logic & Promotions
 - [ ] **Set Up JavaScript Cart State:** Initialize a client-side cart using Local Storage for persistence.

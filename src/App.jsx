@@ -3,6 +3,8 @@ import { ShoppingCart, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './App.css';
 
+import ProductGrid from './components/ProductGrid';
+
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [cartCount, setCartCount] = useState(0);
@@ -14,6 +16,11 @@ function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleAddToCart = (product) => {
+    setCartCount(prev => prev + 1);
+    console.log(`Added to cart: ${product.name}`);
+  };
 
   return (
     <div className="floe-app">
@@ -83,11 +90,8 @@ function App() {
         </motion.div>
       </header>
 
-      {/* Placeholder for future phases */}
-      <section id="catalog" style={{ height: '100vh', padding: '100px 5%' }}>
-        <h2>Explore the Frozen Collection</h2>
-        <p>Premium syrups arriving in Phase 2...</p>
-      </section>
+      {/* Product Catalog */}
+      <ProductGrid onAddToCart={handleAddToCart} />
     </div>
   );
 }

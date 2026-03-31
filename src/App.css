@@ -1,5 +1,5 @@
 .floe-app {
-  min-height: 200vh; /* For scrolling evidence */
+  min-height: 100vh;
 }
 
 /* Navbar Styling */
@@ -143,6 +143,121 @@
 .cta-group {
   display: flex;
   gap: 2rem;
+}
+
+/* Product Grid Section */
+.product-grid-section {
+  padding: 100px 8%;
+  background: white;
+}
+
+.section-header {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 3rem;
+  color: var(--deep-ice);
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #718096;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+/* Product Card Styling */
+.product-card {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-image-container {
+  position: relative;
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--deep-ice);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.product-info {
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info h3 {
+  font-size: 1.5rem;
+  color: var(--deep-ice);
+  margin-bottom: 0.75rem;
+}
+
+.product-description {
+  font-size: 0.95rem;
+  color: #718096;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.product-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--deep-ice);
+}
+
+.add-to-cart-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--deep-ice);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background: #004a99;
 }
 
 @media (max-width: 768px) {

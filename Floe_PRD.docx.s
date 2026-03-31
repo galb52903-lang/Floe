@@ -18,7 +18,7 @@
 
 ## 4. Key Website Features
 ### 4.1 E-Commerce & Checkout
-- [ ] **Product Catalog:** High-resolution display of syrup flavors and descriptions.
+- [x] **Product Catalog:** High-resolution display of syrup flavors and descriptions.
 - [ ] **Dynamic Shopping Cart:** Real-time updates for single items and bundle calculations.
 - [ ] **Threshold Monitoring:** Automated notification when "Free Mug" status is reached.
 - [ ] **Unified Checkout:** Integrated capture of shipping and delivery details.
@@ -52,11 +52,11 @@
 - [x] **Design Navigation Framework:** Build sticky frosted-glass navbar with navigation links.
 - [x] **Build Hero Section:** Develop full-height landing section with high-res "frozen" imagery and primary CTA.
 
-### Phase 2: The Glacial Catalog & UI Layout
-- [ ] **Develop Product Card Component:** Build reusable card with image, title, price, and "Quick Add".
-- [ ] **Configure Responsive Grid:** Implement CSS Grid that adjusts column counts for mobile/desktop.
-- [ ] **Integrate Hover Animations:** Add "frosting" growth effect on product card hover.
-- [ ] **Add Flavor Tags:** Label syrups by taste profile (Sweet, Earthy, Limited).
+### Phase 2: The Glacial Catalog & UI Layout (COMPLETED)
+- [x] **Develop Product Card Component:** Build reusable card with image, title, price, and "Quick Add".
+- [x] **Configure Responsive Grid:** Implement CSS Grid that adjusts column counts for mobile/desktop.
+- [x] **Integrate Hover Animations:** Add "frosting" growth effect on product card hover.
+- [x] **Add Flavor Tags:** Label syrups by taste profile (Sweet, Earthy, Limited).
 
 ### Phase 3: "Frozen" Cart Logic & Promotions
 - [ ] **Set Up JavaScript Cart State:** Initialize array-based state to track item IDs and quantities.
