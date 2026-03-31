@@ -35,7 +35,8 @@
 - [ ] **Micro-Animations:** Fluid transitions that mimic ice and water interactions.
 
 ## 5. Technical Constraints
-- [ ] **Core Stack:** Vanilla HTML5, CSS3, and JavaScript.
+- [x] **Core Stack:** React (Vite), CSS3, Framer Motion (for premium animations).
+- [x] **Platform Hosting:** Optimized for Netlify deployment and GitHub version control.
 - [ ] **API Scope:** No external API integrations for Phase 1.
 - [ ] **Data Persistence:** Use of Local Storage for cart management.
 - [x] **Containerization:** Support for Docker and Docker Compose deployment.

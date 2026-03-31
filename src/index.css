@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@300;400;700&display=swap');
+
+:root {
+  /* Color Palette */
+  --glacial-blue: #a2c2e1;
+  --arctic-white: #f0f8ff;
+  --frost-silver: #dcdcdc;
+  --deep-ice: #003366;
+  --ice-accent: rgba(255, 255, 255, 0.7);
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  
+  /* Layout Constants */
+  --navbar-height: 80px;
+  --transition-speed: 0.4s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--deep-ice);
+  background-color: var(--arctic-white);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+/* Glassmorphism Classes */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+.glass-card {
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition-speed);
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--deep-ice);
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 51, 102, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 51, 102, 0.3);
+}
+
+.btn-secondary {
+  background: var(--glass-bg);
+  color: var(--deep-ice);
+  border: 1px solid var(--deep-ice);
+  backdrop-filter: blur(8px);
+}
+
+.btn-secondary:hover {
+  background: var(--deep-ice);
+  color: white;
+}
